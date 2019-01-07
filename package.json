@@ -31,6 +31,17 @@
         "os": "^0.1.1",
         "parse-git-config": "^3.0.0"
     },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged",
+        }
+    },
+    "lint-staged": {
+        "**/*.{js}": [
+            "eslint -c .eslintrc.js --fix",
+            "git add"
+        ],
+    },
     "bin": {
         "prepareCommit": "./lib/prepare.commit.js",
         "prePush": "./lib/pre.push.js"
