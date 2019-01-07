@@ -12,6 +12,7 @@ git hook 实现用户提交 git commit -m "#f 功能A开发"
 ### 使用方法
 
 git hook依赖于husky模块，工程内如果已经引过husky并利用（或不需要）lint-staged做commit前的eslint校验，则可以跳过lint-stage部分（**但是需要升级husky至^1.3.1，并根据husky升级版本更新package.json配置方式**）
+
 1. 工程内安装husky以及初始化其他依赖
 
 ```
@@ -99,4 +100,5 @@ message用于说明 commit 的描述
 ### 参考
 
 [参考链接【代码与需求保持一致】](https://yq.aliyun.com/articles/616714)
+
 [参考链接【git message规范】](https://segmentfault.com/a/1190000009048911)
