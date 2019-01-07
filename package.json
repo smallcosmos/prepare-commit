@@ -1,0 +1,44 @@
+{
+    "name": "prepare-commit",
+    "version": "1.0.0",
+    "description": "prepare-commit hook for git commit message",
+    "main": "index.js",
+    "directories": {
+        "lib": "lib"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/smallcosmos/prepare-commit.git"
+    },
+    "keywords": [
+        "prepare-commit"
+    ],
+    "devDependencies": {
+        "babel-eslint": "^10.0.1",
+        "chalk": "^2.4.2",
+        "eslint": "^5.11.1",
+        "eslint-config-airbnb": "^17.1.0",
+        "extend": "^3.0.2",
+        "find-up": "^3.0.0",
+        "git-branch": "^2.0.1",
+        "git-user-name": "^2.0.0",
+        "husky": "^1.3.1",
+        "lint-staged": "^8.1.0",
+        "nodemailer": "^5.0.0",
+        "os": "^0.1.1",
+        "parse-git-config": "^3.0.0"
+    },
+    "bin": {
+        "prepareCommit": "./lib/prepare.commit.js",
+        "prePush": "./lib/pre.push.js"
+    },
+    "author": "linxingjian",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/smallcosmos/prepare-commit/issues"
+    },
+    "homepage": "https://github.com/smallcosmos/prepare-commit#readme"
+}
