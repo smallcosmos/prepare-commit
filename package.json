@@ -33,14 +33,14 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "lint-staged",
+            "pre-commit": "lint-staged"
         }
     },
     "lint-staged": {
         "**/*.{js}": [
             "eslint -c .eslintrc.js --fix",
             "git add"
-        ],
+        ]
     },
     "bin": {
         "prepareCommit": "./lib/prepare.commit.js",
