@@ -1,16 +1,17 @@
 ### 功能介绍
 
-git hook 实现 git commit -m "#f 实现功能A" => git commit -m "KJDS-xxxxx feature: 实现功能A"
+git hook 实现用户提交 git commit -m "#f 功能A开发"
+自动转变为 git commit -m "KJDS-xxxxx feature: 功能A开发"
 
-规范git commit message的格式，达到以下两点标准：
-1. commit于jira自动对应，即需求与代码一致性
-2. 强制commit type只允许为其中类型，进一步规范commit message
+规范git commit message的格式，达到以下两点要求：
+1. commit与jira自动对应，即需求与代码一致性
+2. 强制commit type只允许为七种类型，进一步规范commit message
 
 另外，还提供了git push邮件通知的功能，方便code reviewer监督，该功能需主动配置开启
 
 ### 使用方法
 
-git hook依赖于husky模块，工程内如果已经引过husky并利用lint-staged做了commit前的eslint校验，则可以跳过1，2步（**但是需要升级husky至^1.3.1，并根据husky升级版本更新package.json配置方式**）
+git hook依赖于husky模块，工程内如果已经引过husky并利用（或不需要）lint-staged做commit前的eslint校验，则可以跳过lint-stage部分（**但是需要升级husky至^1.3.1，并根据husky升级版本更新package.json配置方式**）
 1. 工程内安装husky以及初始化其他依赖
 
 ```
@@ -18,9 +19,8 @@ npm install husky --save-dev
 npm install lint-staged --save-dev
 npm install prepare-commit --save-dev
 ```
-```
 
-3. 工程内配置根路径package.json中的husky钩子
+2. 工程内配置根路径package.json中的husky钩子
 
 ```
     ...
@@ -47,7 +47,20 @@ npm install prepare-commit --save-dev
     ...
 ```
 
-# git commit message 简化规范
+3. git push邮件通知功能开启
+
+项目根目录下（git目录）新建.preparecommitrc, 配置邮箱功能开启，并配置收件人列表
+
+```
+{
+    "emailEnable": true,
+    "emailGroup": [
+        "user@163.com"
+    ]
+}
+```
+
+# 【附录】git commit message 简化规范
 
 ** Commit message 包括三个部分：jira【必需】，type【必需】，message【必需】, scope【可选】
 
