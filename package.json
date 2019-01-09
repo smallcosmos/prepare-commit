@@ -26,7 +26,7 @@
     "husky": {
         "hooks": {
             "pre-commit": "lint-staged",
-            "prepare-commit": "node ./lib/prepare.commit.js",
+            "prepare-commit-msg": "node ./lib/prepare.commit.js",
             "pre-push": "node ./lib/pre.push.js"
         }
     },
