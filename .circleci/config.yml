@@ -6,10 +6,10 @@ jobs:
     steps: 
       - checkout
       - run:
-        name: Check Scripts
-        command: |
-          find . -type f -name '*.sh' | wc -l
-          find . -type f -name '*.sh' | xargs shellcheck --external-sources
+          name: Check Scripts
+          command: |
+            find . -type f -name '*.sh' | wc -l
+            find . -type f -name '*.sh' | xargs shellcheck --external-sources
   build:
     docker:
       - image: circleci/node@sha256:9ad2cc2e228dc5f00ac5dcaf3fd83dcedfee4b3a6f779515060070c46891fa10
@@ -17,12 +17,12 @@ jobs:
       - run: echo "A first hello"
 workflows:
   version: 2
-  build:
+  workflow:
     jobs:
       - shellcheck
-      - build
-        requires: 
-          - shellcheck
-        filters:
-          branched: 
-            only: master
+      - build:
+          requires:
+            - shellcheck
+          filters:
+            branches: 
+              only: master
