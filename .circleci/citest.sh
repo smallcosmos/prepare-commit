@@ -7,7 +7,7 @@ set -o errexit
 # Use the error status of the first failure, rather than that of the last item in a pipeline.
 set -o xtrace
 
-curl --user ${CIRCLE_TOKEN}: \
+curl --user "${CIRCLE_TOKEN}": \
     --request POST \
     --form revision=a0a0fff7bdaf84f95400d79eb7367ebe4684e8dc\
     --form config=@config.yml \
