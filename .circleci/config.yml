@@ -4,6 +4,7 @@ jobs:
     docker: 
       - image: nlknguyen/alpine-shellcheck:v0.4.6
       - image: circleci/node:chakracore-8-browsers-legacy
+      - image: docker:stable-git
     steps: 
       - checkout
       - run:
