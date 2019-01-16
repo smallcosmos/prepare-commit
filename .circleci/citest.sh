@@ -5,11 +5,11 @@ set -o nounset
 # Exit script if a statement returns a non-true return value.
 set -o errexit
 # Use the error status of the first failure, rather than that of the last item in a pipeline.
-set -o xtrace
+# set -o xtrace
 
-echo `dirname $0`
-echo `pwd`
-echo `node --version`
+"pwd"
+echo "`dirname '$0'`"
+node --version
 
 # git status
 
