@@ -7,8 +7,10 @@ jobs:
       - image: docker:stable-git
     steps: 
       - checkout
+      - setup_remote_docker
       - run:
           name: Check Scripts
+          shell: /bin/sh
           command: |
             find . -type f -name '*.sh' | wc -l
             find . -type f -name '*.sh' | xargs shellcheck --external-sources
