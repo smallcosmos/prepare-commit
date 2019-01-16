@@ -7,8 +7,8 @@ set -o errexit
 # Use the error status of the first failure, rather than that of the last item in a pipeline.
 # set -o xtrace
 
-"pwd"
-echo "`dirname '$0'`"
+pwd
+dirname "$0"
 node --version
 
 # git status
