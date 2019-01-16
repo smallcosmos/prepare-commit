@@ -1,3 +1,6 @@
 .eslintrc.js
 README.md
 .github/*
+
+lib/email.js
+lib/pre.push.js

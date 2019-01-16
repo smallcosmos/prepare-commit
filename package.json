@@ -37,8 +37,7 @@
         ]
     },
     "bin": {
-        "prepareCommit": "./lib/prepare.commit.js",
-        "prePush": "./lib/pre.push.js"
+        "prepareCommit": "./lib/prepare.commit.js"
     },
     "author": "linxingjian",
     "license": "ISC",
