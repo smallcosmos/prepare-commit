@@ -3,7 +3,7 @@ jobs:
   shellcheck:
     docker: 
       - image: nlknguyen/alpine-shellcheck:v0.4.6
-      - image: circleci/node@sha256:9ad2cc2e228dc5f00ac5dcaf3fd83dcedfee4b3a6f779515060070c46891fa10
+      - image: circleci/node:v8.11.3
     steps: 
       - checkout
       - run:
@@ -12,6 +12,8 @@ jobs:
             find . -type f -name '*.sh' | wc -l
             find . -type f -name '*.sh' | xargs shellcheck --external-sources
             pwd
+            ls -a
+            git status
   build:
     docker:
       - image: circleci/node@sha256:9ad2cc2e228dc5f00ac5dcaf3fd83dcedfee4b3a6f779515060070c46891fa10
