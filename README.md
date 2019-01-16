@@ -29,8 +29,7 @@ npm install prepare-commit --save-dev
         "hooks": {
             //...
             "pre-commit": "lint-staged",
-            "prepare-commit-msg": "prepareCommit",
-            "pre-push": "prePush"
+            "prepare-commit-msg": "prepareCommit"
         }
     },
     //以下请根据工程自行定义
@@ -48,7 +47,7 @@ npm install prepare-commit --save-dev
     ...
 ```
 
-3. git push邮件通知功能开启【邮件功能转移到ci中完成】
+3. 【忽略】git push邮件通知功能开启【邮件功能转移到ci中完成】
 
 项目根目录下（git目录）新建.preparecommitrc, 配置邮箱功能开启，并配置收件人列表
 
