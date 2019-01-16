@@ -1,6 +1,6 @@
 {
     "name": "prepare-commit",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "prepare-commit hook for git commit message",
     "main": "index.js",
     "directories": {
