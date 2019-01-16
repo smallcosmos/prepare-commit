@@ -1,6 +1,7 @@
 .eslintrc.js
 README.md
 .github/*
+.circleci/*
 
 lib/email.js
 lib/pre.push.js
