@@ -14,6 +14,7 @@ jobs:
             find . -type f -name '*.sh' | xargs shellcheck --external-sources
             pwd
             ls -a
+            which git
             git status
             node --version
   build:
